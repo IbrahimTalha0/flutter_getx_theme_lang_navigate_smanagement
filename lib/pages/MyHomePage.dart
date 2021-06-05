@@ -1,4 +1,3 @@
-
 // ignore: must_be_immutable
 import 'package:flutter/material.dart';
 import 'package:flutter_getx_theme_lang_navigate_smanagement/controller/counter_controller.dart';
@@ -50,19 +49,22 @@ class MyHomePage extends StatelessWidget {
             child: Icon(Icons.remove),
           ),
           FloatingActionButton(
-            heroTag: "3",
-            onPressed: () {
-              Get.updateLocale(Get.locale == Locale("tr", "TR") ? Locale("en", "US"):Locale("tr", "TR"));
-            }, child: Icon(Icons.language)),
+              heroTag: "3",
+              onPressed: () {
+                Get.updateLocale(Get.locale == Locale("tr", "TR")
+                    ? Locale("en", "US")
+                    : Locale("tr", "TR"));
+              },
+              child: Icon(Icons.language)),
           FloatingActionButton(
-            heroTag: "4",
+              heroTag: "4",
               onPressed: () {
                 Get.changeTheme(
                     Get.isDarkMode ? ThemeData.light() : ThemeData.dark());
               },
               child: Icon(Icons.change_circle)),
-                        FloatingActionButton(
-                          heroTag: "5",
+          FloatingActionButton(
+              heroTag: "5",
               onPressed: () {
                 Get.to(ShowCounter());
               },

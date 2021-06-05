@@ -1,7 +1,6 @@
 // @dart=2.9
 
 import 'package:flutter/material.dart';
-import 'package:flutter_getx_theme_lang_navigate_smanagement/controller/counter_controller.dart';
 import 'package:flutter_getx_theme_lang_navigate_smanagement/pages/MyHomePage.dart';
 import 'package:get/get.dart';
 
@@ -17,8 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       translations: Messages(), // your translations
-      locale:
-          Get.deviceLocale, // translations will be displayed in that locale
+      locale: Get.deviceLocale, // translations will be displayed in that locale
       fallbackLocale: Locale('tr',
           'TR'), // specify the fallback locale in case an invalid locale is selected.
       title: 'Flutter Demo',
